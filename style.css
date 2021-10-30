@@ -1,0 +1,96 @@
+body {
+  margin: 0px;
+  overflow: hidden;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.start {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  animation: animation 4s ease;
+}
+
+.text-start {
+  font-size: 3rem;
+  color: hsl(120, 60%, 50%);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+@keyframes animation {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  40% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+.winner {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.win-text {
+  color: whitesmoke;
+  font-size: 3rem;
+  text-align: center;
+  animation: slideDown 3s ease;
+}
+
+.replay-text {
+  color: whitesmoke;
+  text-align: center;
+  font-size: 2rem;
+  animation: slideUp 3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
